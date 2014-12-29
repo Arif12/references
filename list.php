@@ -14,6 +14,7 @@ $result = mysqli_query($link, $query);
 <ul>
     <li><a href="create.php">Create New Record</a> </li>
 </ul>
+<h1> References</h1>
 <table border="1" width="100%">
     <tr>
         <td>ID</td>
@@ -23,6 +24,7 @@ $result = mysqli_query($link, $query);
         <td>Phone</td>
         <td>email</td>
         <td>Relation</td>
+        <td>hobby</td>
         <td>Action</td>
     </tr>
     <?php
@@ -36,6 +38,7 @@ $result = mysqli_query($link, $query);
             <td><?php echo $row['phone']?></td>
             <td><?php echo $row['email']?></td>
             <td><?php echo $row['relation']?></td>
+            <td><?php echo $row['hobby']?></td>
             <td> <a href="edit.php?id=<?php echo $row['id']?>">Edit</a> |
                 <a href="delete.php?id=<?php echo $row['id']?>">Delete</a> |
                 <a href="view.php?id=<?php echo $row['id']?>">View</a></td>

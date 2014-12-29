@@ -37,6 +37,15 @@ $row = mysqli_fetch_assoc($result);
     <label>relation</label>
     <input type="text" name="relation" value="<?php echo $row['relation'];?>">
     <br>
+     <?php
+    $date=explode(",",$row['hobby']);
+    list($tennis, $cricket, $dance,$sketching)=$date;
+    ?>
+    <label>Hobby</label>
+     <input type="checkbox" <?php if ($tennis == "tennis") echo 'checked'; ?> value="tennis">tennis;
+     <input type="checkbox" <?php if ($cricket == "cricket") echo 'checked'; ?> value="cricket">cricket;
+     <input type="checkbox" <?php if ($dance == "dance") echo 'checked'; ?> value="dance">Dance;
+     <input type="checkbox" <?php if ($sketching == "sketching") echo 'checked'; ?> value="sketching">sketching;
     <button type="submit">Update</button>
 </form>
 

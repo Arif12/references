@@ -19,5 +19,17 @@
 <label>Relation</label>
 <input type="text"  name="relation">
 <br>
+<label>Hobby</label>
+<br><br>
+  <td>Hobbies:</td><td><input type="checkbox" name="hobbies[]" value="tennis">Tennis &nbsp;
+     <input type="checkbox" name="hobbies[]" value="cricket">Cricket &nbsp; 
+     <input type="checkbox" name="hobbies[]" value="dance">Dance &nbsp; 
+     <input type="checkbox" name="hobbies[]" value="sketching">Sketching &nbsp;
+    </td>
+<br>
 <button type="submit">Submit</button>
 </form>
+
+<?php
+print_r($_POST);
+?>
